@@ -16,14 +16,13 @@ The app controls the data flow
     - onNext(1) - From data source
     - onNext(2) - From data source
     - cancel() - From app - done processing data
-    
+
 ## Reactive Streams
     - Publisher - subscribe(Subscriber<T> subscriber)
     - Subscriber
     - Subscription
-    
+
 ## Tools
     - netty - non blocking Server uses Event Loop Model
     - Project Reactor - for writing non blocking code
     - Spring WebFlux - uses Netty and Project Reactor for building non blocking or reactive APIs
-    
