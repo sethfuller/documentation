@@ -25,12 +25,12 @@ public class UserServiceApplication {
 |Annotation|Description|
 |----|----|
 |@RestController||
-|@RequestMapping("v1")||
-|@ResponseStatus(HttpStatus.CREATED)||
-|@GetMapping("/users")||
-|@PostMapping("/users"||
-|@DeleteMapping("/{id}")||
-|@PathVariable("id") String userId||
+|@RequestMapping("v1")|For this class all requests must be preceeded by "vi"|
+|@ResponseStatus(HttpStatus.CREATED)|When the POST succeeds return the Created status code|
+|@GetMapping("/users")|Get the Users|
+|@PostMapping("/users"|Create an entity with the Request Body|
+|@DeleteMapping("/users/{id}")|When a DELETE request is recieved with an id field process with this method|
+|@PathVariable("id") String userId|Extract the variable with name "id" and place it in userId|
 
 ```java
 package com.sethfuller.controller;
@@ -95,8 +95,8 @@ import com.sethfuller.service.UserService;
 # Exception Handling for Controller
 |Annotation|Description|
 |----|----|
-|@ControllerAdvice| |
-|@ExceptionHandler(MethodArgumentNotValidException.class)||
+|@ControllerAdvice|This class is used to handle exceptions for all RestController classes |
+|@ExceptionHandler(MethodArgumentNotValidException.class)|This method handle the specified exception class|
 
 ```java
 package com.sethfuller.exceptions;
@@ -155,8 +155,8 @@ public class BaseExceptionHandler {
 ## Service
 |Annotation|Description|
 |----|----|
-|@Service||
-|@Transactional||
+|@Service|This is a Service class|
+|@Transactional|Updates/Inserts/Deletes are transactional|
 
 ```java
 package com.sethfuller.service;
@@ -175,6 +175,9 @@ public interface UserService {
 }
 ```
 
+### Service Interface
+Defines the interface for the service.
+
 ```java
 package com.sethfuller.service;
 
@@ -191,6 +194,8 @@ public interface UserService {
 	public void update(User user, PatchUserRequest request);
 }
 ```
+
+### Service Implementation
 
 ```java
 package com.sethfuller.service;
@@ -296,16 +301,17 @@ public interface UserRepository extends JpaRepository<User, Long>  {
 ## Model
 |Annotation|Description|
 |----|----|
-|@Entity ||
+|@Entity |Table in the Database|
 |@JsonInclude(Include.NON_NULL)||
-|@Id||
-|@GeneratedValue(strategy = GenerationType.AUTO)||
-|@JsonIgnore||
-|@Column(length = 30)||
-|@JsonProperty("first_name")||
-|@NotEmpty(message = "The first name can not be null or empty")||
-|@Pattern(regexp = AppConstants.EMAIL_REGEXPR, message = "Email must be valid")||
-|@CreationTimestamp||
+|@Id|The unique identifier for the table|
+|@GeneratedValue(strategy = GenerationType.AUTO)|Use the default id generator|
+|@JsonIgnore|When sending to the client do not include this field|
+|@Column(length = 30)|Database column - length 30|
+|@JsonProperty("first_name")|When the JSON property name is different than the Java property name|
+|@NotEmpty(message = "The first name can not be null or empty")|Generate an error is the column is empty|
+|@Pattern(regexp = AppConstants.EMAIL_REGEXPR, message = "Email must be valid")|Validate that the data received matches the pattern|
+|@CreationTimestamp|This field will be filled when the entity is created|
+|@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy HH:mm:ss")|Format for the field|
 
 ```java
 package com.sethfuller.model;
