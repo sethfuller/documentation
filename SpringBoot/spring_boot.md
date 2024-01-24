@@ -11,11 +11,11 @@ Here are some major advantages of using spring-boot:
     - Allows you to Embed Undertow, Tomcat, or Jetty directly.
     - Helps you to configure spring whenever possible automatically.
 
-# Spring Intializer
+# Spring Intializr
 It is a web tool provided by Spring on its official website. However,
 you can also create Spring Boot project by entering project details.
 
-[Spring Initializer](https://start.spring.io/)
+[Spring Initializr](https://start.spring.io/)
 
 # Features
 
