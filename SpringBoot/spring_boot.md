@@ -61,7 +61,7 @@ Starter:
     spring-boot-starter-parent: Enables Auto Config
     spring-boot-starter-web: It is used for building the web application, including RESTfu applications using Spring MVC. It uses Tomcat as the default embedded container.
 ___
-
+    
     | Starter | Description |
     | ------ | ----- |
     | spring-boot-starter-parent | Enables Auto Config |
