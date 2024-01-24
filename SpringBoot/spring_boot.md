@@ -56,13 +56,15 @@ In src/main/resources
 
 # Spring Boot Starters
     
-    | Starter | Description |
-    | ------ | ----- |
-    | spring-boot-starter-parent | Enables Auto Config |
-    | spring-boot-starter-web |	It is used for building the web application, including RESTful applications using Spring MVC. It uses Tomcat as the default embedded container. |
-    | spring-boot-starter-web-services | Spring Web Services |
-    | spring-boot-starter-test | It is used to test Spring Boot applications with libraries, including JUnit, Hamcrest, and Mockito. |
-    | spring-boot-starter-integration | It is used for Spring Integration. |
-    | spring-boot-starter-jdbc | It is used for JDBC with the Tomcat JDBC connection pool. |
+| Starter | Description |
+| ------ | ----- |
+|   |   |
+| spring-boot-starter-parent | Enables Auto Config |
+| spring-boot-starter-web |	It is used for building the web application, including RESTful applications using Spring MVC. It uses Tomcat as the default embedded container. |
+| spring-boot-starter-web-services | Spring Web Services |
+| spring-boot-starter-test | It is used to test Spring Boot applications with libraries,|
+|   |including JUnit, Hamcrest, and Mockito. |
+| spring-boot-starter-integration | It is used for Spring Integration. |
+| spring-boot-starter-jdbc | It is used for JDBC with the Tomcat JDBC connection pool. |
 
 
