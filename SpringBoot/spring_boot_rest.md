@@ -27,10 +27,12 @@ public class UserServiceApplication {
 |@RestController||
 |@RequestMapping("v1")|For this class all requests must be preceeded by "v1"|
 |@ResponseStatus(HttpStatus.CREATED)|When the POST succeeds return the Created status code|
-|@GetMapping("/users")|Get the Users|
-|@PostMapping("/users"|Create an entity with the Request Body|
+|@GetMapping("/users")|On GET Request Get the Users|
+|@GetMapping("/users/{id}")|On GET Request Get the User for the ID|
+|@PostMapping("/users"|On POST request create an entity with the Request Body|
 |@DeleteMapping("/users/{id}")|When a DELETE request is recieved with an id field process with this method|
 |@PathVariable("id") String userId|Extract the variable with name "id" and place it in userId|
+|@ResponseBody|This request returns data in the body|
 
 ```java
 package com.sethfuller.controller;
