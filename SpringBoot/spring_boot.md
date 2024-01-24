@@ -58,13 +58,21 @@ In src/main/resources
     
 | Starter | Description |
 | ------ | ----- |
-|   |   |
 | spring-boot-starter-parent | Enables Auto Config |
+| **Web** | **Description** |
+| spring-boot-starter-data-rest | Spring Data repositories over REST using Spring Data REST |
 | spring-boot-starter-web |	It is used for building the web application, including RESTful applications using Spring MVC. It uses Tomcat as the default embedded container. |
 | spring-boot-starter-web-services | Spring Web Services |
-| spring-boot-starter-test | It is used to test Spring Boot applications with libraries,|
-|   |including JUnit, Hamcrest, and Mockito. |
+| **Test**| **Description** |
+| spring-boot-starter-test | It is used to test Spring Boot applications with libraries, including JUnit, Hamcrest, and Mockito. |
 | spring-boot-starter-integration | It is used for Spring Integration. |
+| **Database** | **Description** |
+| spring-boot-starter-data-jpa|JPA with Hibernate|
 | spring-boot-starter-jdbc | It is used for JDBC with the Tomcat JDBC connection pool. |
+| spring-boot-starter-data-elasticsearch|Elasticsearch search and analytics engine and Spring Data Elasticsearch |
+| spring-boot-starter-data-mongodb| MongoDB document-oriented database and Spring Data MongoDB Reactive|
 
+# Spring Boot Actuator
 
+# REST
+[Spring Boot REST Examples](spring_boot_rest.md)
