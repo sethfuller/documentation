@@ -2,6 +2,10 @@
 [Spring Boot Main Page](spring_boot.md)
 
 ## Application
+|Annotation|Description|
+|----|----|
+|@SpringBootApplication||
+
 ```java
 package com.sethfuller;
 
@@ -18,6 +22,16 @@ public class UserServiceApplication {
 ```
 
 ## RestController
+|Annotation|Description|
+|----|----|
+|@RestController||
+|@RequestMapping("v1")||
+|@ResponseStatus(HttpStatus.CREATED)||
+|@GetMapping("/users")||
+|@PostMapping("/users"||
+|@DeleteMapping("/{id}")||
+|@PathVariable("id") String userId||
+
 ```java
 package com.sethfuller.controller;
 
@@ -79,6 +93,11 @@ import com.sethfuller.service.UserService;
 ```
 
 # Exception Handling for Controller
+|Annotation|Description|
+|----|----|
+|@ControllerAdvice| |
+|@ExceptionHandler(MethodArgumentNotValidException.class)||
+
 ```java
 package com.sethfuller.exceptions;
 
@@ -134,6 +153,10 @@ public class BaseExceptionHandler {
 ```
 
 ## Service
+|Annotation|Description|
+|----|----|
+|@Service||
+|@Transactional||
 
 ```java
 package com.sethfuller.service;
@@ -249,6 +272,10 @@ public class UserServiceImpl implements UserService {
 
 ```
 ## Repository
+|Annotation|Description|
+|----|----|
+|@Repository||
+
 ```java
 package com.sethfuller.repository;
 
@@ -267,6 +294,19 @@ public interface UserRepository extends JpaRepository<User, Long>  {
 ```
 
 ## Model
+|Annotation|Description|
+|----|----|
+|@Entity ||
+|@JsonInclude(Include.NON_NULL)||
+|@Id||
+|@GeneratedValue(strategy = GenerationType.AUTO)||
+|@JsonIgnore||
+|@Column(length = 30)||
+|@JsonProperty("first_name")||
+|@NotEmpty(message = "The first name can not be null or empty")||
+|@Pattern(regexp = AppConstants.EMAIL_REGEXPR, message = "Email must be valid")||
+|@CreationTimestamp||
+
 ```java
 package com.sethfuller.model;
 
