@@ -279,8 +279,8 @@ public class UserServiceImpl implements UserService {
 ## Repository
 |Annotation|Description|
 |----|----|
-|@Repository||
-
+|@Repository|This interface is implemented by Spring with all methods for CRUD and data retrieval|
+||JpaRepository<User, Long> - This is a JPA Repository for the User class with the id being of type Long|
 ```java
 package com.sethfuller.repository;
 
