@@ -25,7 +25,7 @@ public class UserServiceApplication {
 |Annotation|Description|
 |----|----|
 |@RestController||
-|@RequestMapping("v1")|For this class all requests must be preceeded by "vi"|
+|@RequestMapping("v1")|For this class all requests must be preceeded by "v1"|
 |@ResponseStatus(HttpStatus.CREATED)|When the POST succeeds return the Created status code|
 |@GetMapping("/users")|Get the Users|
 |@PostMapping("/users"|Create an entity with the Request Body|
