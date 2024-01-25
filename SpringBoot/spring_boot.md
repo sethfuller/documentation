@@ -65,7 +65,6 @@ In src/main/resources
 | spring-boot-starter-web-services | Spring Web Services |
 | **Test**| **Description** |
 | spring-boot-starter-test | It is used to test Spring Boot applications with libraries, including JUnit, Hamcrest, and Mockito. |
-| spring-boot-starter-integration | It is used for Spring Integration. |
 | **Database** | **Description** |
 | spring-boot-starter-data-jpa|JPA with Hibernate|
 | spring-boot-starter-jdbc | It is used for JDBC with the Tomcat JDBC connection pool. |
