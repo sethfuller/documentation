@@ -4,7 +4,7 @@
 ## Application
 |Annotation|Description|
 |----|----|
-|@SpringBootApplication||
+|@SpringBootApplication|The main class for the Spring Boot Application|
 
 ```java
 package com.sethfuller;
