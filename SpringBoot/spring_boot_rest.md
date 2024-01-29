@@ -24,8 +24,8 @@ public class UserServiceApplication {
 ## RestController
 |Annotation|Description|
 |----|----|
-|@RestController||
-|@RequestMapping("v1")|For this class all requests must be preceeded by "v1"|
+|@RestController|Includes @Controller and @ResponseBody|
+|@RequestMapping("v1")|For this class all requests must be preceeded by "v1" in the path|
 |@ResponseStatus(HttpStatus.CREATED)|When the POST succeeds return the Created status code|
 |@GetMapping("/users")|On GET Request Get the Users|
 |@GetMapping("/users/{id}")|On GET Request Get the User for the ID|
