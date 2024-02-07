@@ -39,6 +39,8 @@ REST endpoint.
 ```
 ### Proxy
 The proxy uses the Eureka server to locate the service to communicate with.
+The remote REST service returns a JSON object that has the same initial fields as the
+CurrencyConversion object that the local endpoint uses.
 
 ```java
 
