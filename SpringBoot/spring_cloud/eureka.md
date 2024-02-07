@@ -47,6 +47,10 @@ spring.config.import=optional:configserver:
 
 #### application.properties
 
+The Eureka client registers with the Eureka server using **server.application.name**.
+
 ```properties
+spring.application.name=customer
+
 eureka.client.serviceUrl.defaultZone=http://localhost:8761/eureka
 ```
