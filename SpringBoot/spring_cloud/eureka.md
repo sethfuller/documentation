@@ -2,6 +2,12 @@
 
 [Github Repo](https://github.com/Netflix/eureka)
 
+Eureka sets up servers that know how to communicate with REST endpoints.
+The REST endpoints are clients that subscribe to the Eureka server to locate other
+REST endpoints.
+
+Multiple Eureka servers can be created.
+
 ## Server
 [Spring Documentation](https://cloud.spring.io/spring-cloud-netflix/reference/html/#spring-cloud-eureka-server)
 
@@ -18,7 +24,10 @@
 spring.application.name=naming-server
 server.port=8761
 
+# This is the server so don't register as a client
 eureka.client.register-with-eureka=false
+
+# Do not fetch registry since the server creates the registry
 eureka.client.fetch-registry=false
 
 spring.config.import=optional:configserver:

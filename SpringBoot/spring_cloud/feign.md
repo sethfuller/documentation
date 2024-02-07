@@ -2,6 +2,8 @@
 [Spring Documentation](https://spring.io/projects/spring-cloud-openfeign)
 [OpenFeign Repo](https://github.com/OpenFeign/feign)
 
+Feign communicates with the Eureka naming server to locate REST endpoints.
+
 ## pom.xml
 ```xml
 		<dependency>
@@ -11,6 +13,9 @@
 ```
 
 ## @RestController
+The RestController calls the proxy which uses Feign to get the information from the remote
+REST endpoint.
+
 ```java
 	@Autowired
 	private CurrencyExchangeProxy proxy;
@@ -33,6 +38,8 @@
 	}
 ```
 ### Proxy
+The proxy uses the Eureka server to locate the service to communicate with.
+
 ```java
 
 import org.springframework.cloud.openfeign.FeignClient;
@@ -53,6 +60,7 @@ public interface CurrencyExchangeProxy {
 ```
 
 ## @SpringBootApplication
+Add the @EnableFeignClients annotation to enable feign.
 
 ```java
 import org.springframework.boot.SpringApplication;
