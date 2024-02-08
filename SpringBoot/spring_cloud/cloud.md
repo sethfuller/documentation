@@ -1,7 +1,6 @@
 # Spring Cloud Libraries
 
 ## Netflix Eureka
-[Github Repo](https://github.com/Netflix/eureka)
 
 [Eureka Notes](./eureka.md)
 
