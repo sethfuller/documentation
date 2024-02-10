@@ -1,3 +1,9 @@
+# Connect
+```bash
+    mysql [-p <port>] -u <user_name>
+```
+mysql will ask for the password if there is one.
+
 # Create User
 [Create User With Permissions](https://www.digitalocean.com/community/tutorials/how-to-create-a-new-user-and-grant-permissions-in-mysql)
 
@@ -59,4 +65,25 @@ This authenticates with the reccomended caching_sha2_password plugin.
 ## Show Privileges
 ```sql
     SHOW GRANTS FOR 'username'@'host';
+```
+
+## Show all Users
+```sql
+    SELECT User, Host FROM mysql.user;
+```
+There are many other columns that show privileges and other information.
+
+## Tables
+### List
+```sql
+    SHOW TABLES;
+```
+### Columns
+```sql
+    DESCRIBE <table_name>;
+```
+
+## List Databases
+```sql
+    SHOW DATABASES;
 ```
