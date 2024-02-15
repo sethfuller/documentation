@@ -18,12 +18,7 @@
 ```
 
 ### Web
-```xml
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-```
+[Web Features](spring_boot_web.md)
 
 ### Data JPA
 ```xml
