@@ -6,10 +6,14 @@ Feign communicates with the Eureka naming server to locate REST endpoints.
 
 ## pom.xml
 ```xml
+    <dependencies>
+        ...
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
 		</dependency>
+       ...
+    </dependencies>
 ```
 
 ## @RestController

@@ -13,10 +13,16 @@ Multiple Eureka servers can be created.
 
 #### pom.xml
 ```xml
+    <dependencies>
+        ...
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
 		</dependency>
+       ...
+    </dependencies>
+       ...
+    </dependencies>
 ```
 
 #### application.properties
@@ -39,10 +45,14 @@ spring.config.import=optional:configserver:
 #### pom.xml
 
 ```xml
+    <dependencies>
+        ...
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
 		</dependency>
+       ...
+    </dependencies>
 ```
 
 #### application.properties
