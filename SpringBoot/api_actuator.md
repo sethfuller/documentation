@@ -1,7 +1,8 @@
 ## Monitoring with Actuator
+The Actuator module provides all of Spring Boot's production-ready features.
 
 #### Maven Dependency
-In the **pom.xml** file add the following starter dependency.
+In the **pom.xml** file add the following starter dependency to activate Actuator.
 
 ```xml
     <dependencies>
@@ -14,7 +15,7 @@ In the **pom.xml** file add the following starter dependency.
     </dependencies>
 ```
 
-#### URLs
+#### URL
 To see all of the Actuator endpoints that are activated type this URL:
 
 ```
@@ -22,20 +23,26 @@ To see all of the Actuator endpoints that are activated type this URL:
 ```
 
 ### Endpoints
+This is a partial listing of the Actuator endpoints. For a complete list of Actuator endpoints
+see [Actuator Documentation](https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html)
+
+Sanitization in the descriptions below means that unless configured to show values all the
+values will be displayed as asterisks.
 
 |Endpoint|Description|
 |---|---|
 |health|The health of the application. By default this is the only endpoint activated|
-|beans|All of the beans defined in your application both by your developers and the Spring Framework|env|Show all variables set in the environment|
-|metrics|Performance metrics for many aspects of your application|
-|mappings|Request mappings details|
+|beans|All of the Spring beans defined in your application both by your developers and the Spring Framework|env|Exposes properties from Spring’s ConfigurableEnvironment. Subject to **sanitization**.|
+|configprops|Displays a collated list of all @ConfigurationProperties. Subject to **sanitization**.|
+|metrics|Metrics for many aspects of your application|
+|mappings|Displays a collated list of all @RequestMapping paths.|
 
 ### Configuring Active Endpoints
 
 In application.properties enter:
 ```
 # Activate the listed endpoints
-# management.endpoints.web.exposure.include=health, beans, metrics, mappings
+# management.endpoints.web.exposure.include=health,beans,metrics,mappings
 
 # Activate all actuator endpoints
 management.endpoints.web.exposure.include=*
@@ -50,7 +57,52 @@ management.endpoint.configprops.show-values=ALWAYS
 management.endpoint.env.show-values=ALWAYS
 ```
 
+### Security
+If your application is exposed to the public Actuator endpoints should be secured. If
+Spring Security is on the classpath and no other SecurityFilterChain bean is present, all
+actuators other than /health are secured by Spring Boot auto-configuration. If you define a custom
+SecurityFilterChain bean, Spring Boot will use that to secure the endpoints instead.
+
+This example of a SecurityFilterChain bean is from the Spring Boot Actuator documentation.
+It only allows access to Actuator endpoints if the user has **ENDPOINT_ADMIN** permission.
+
+```java
+import org.springframework.boot.actuate.autoconfigure.security.servlet.EndpointRequest;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.web.SecurityFilterChain;
+
+import static org.springframework.security.config.Customizer.withDefaults;
+
+@Configuration(proxyBeanMethods = false)
+public class MySecurityConfiguration {
+
+    @Bean
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+        http.securityMatcher(EndpointRequest.toAnyEndpoint());
+        http.authorizeHttpRequests((requests) -> requests.anyRequest().hasRole("ENDPOINT_ADMIN"));
+        http.httpBasic(withDefaults());
+        return http.build();
+    }
+
+}
+
+```
+
+To allow unauthenticated access to all of the Actuator endpoints replace the line:
+```java
+        http.authorizeHttpRequests((requests) -> requests.anyRequest().hasRole("ENDPOINT_ADMIN"));
+```
+
+With:
+```java
+        http.authorizeHttpRequests((requests) -> requests.anyRequest().permitAll());
+```
+
 #### Health
+
+##### URL
 
 ```
     http://localhost:8080/actuator/health
@@ -64,6 +116,8 @@ management.endpoint.env.show-values=ALWAYS
 ```
 
 #### Beans
+
+##### URL
 
 ```
     http://localhost:8080/actuator/beans
@@ -104,6 +158,8 @@ management.endpoint.env.show-values=ALWAYS
 The /actuator/env endpoint returns all configured values for the application and the system
 it is running on.
 
+##### URL
+
 ```
     http://localhost:8080/actuator/env
 ```
@@ -116,7 +172,7 @@ management.endpoint.env.show-values=ALWAYS
 ```
 
 ##### Response
-This is a partial sample of the values returned by the /env endpoint.
+This is a partial sample of the values returned by the /actuator/env endpoint.
 
 ```json
 {
@@ -164,11 +220,84 @@ This is a partial sample of the values returned by the /env endpoint.
     },
     ...
    ]
-   
+```
+
+#### Environment
+The /actuator/env endpoint returns all configured values for the application and the system
+it is running on.
+
+##### URL
+
+```
+    http://localhost:8080/actuator/env
+```
+##### Configuration
+The application.properties must be configured with:
+```
+# Show all variables set for the application by configuration, or in the system
+# Valid values: ALWAYS, NEVER (default), WHEN_AUTHORIZED
+management.endpoint.configprops.show-values=ALWAYS
+```
+
+##### Response
+This is a partial sample of the values returned by the /actuator/configprops endpoint.
+
+```json
+{
+  "contexts": {
+    "application": {
+      "beans": {
+        "spring.ssl-org.springframework.boot.autoconfigure.ssl.SslProperties": {
+          "prefix": "spring.ssl",
+          "properties": {
+            "bundle": {
+              "pem": {},
+              "jks": {},
+              "watch": {
+                "file": {
+                  "quietPeriod": "PT10S"
+                }
+              }
+            }
+          },
+          "inputs": {
+            "bundle": {
+              "pem": {},
+              "jks": {},
+              "watch": {
+                "file": {
+                  "quietPeriod": {}
+                }
+              }
+            }
+          }
+        },
+        ...
+        "management.endpoint.configprops-org.springframework.boot.actuate.autoconfigure.context.properties.ConfigurationPropertiesReportEndpointProperties": {
+          "prefix": "management.endpoint.configprops",
+          "properties": {
+            "showValues": "ALWAYS",
+            "roles": []
+          },
+          "inputs": {
+            "showValues": {
+              "value": "ALWAYS",
+              "origin": "class path resource [application.properties] - 3:45"
+            },
+            "roles": []
+          }
+        },
+        ...
+      }
+    }
+  }
+}
 ```
 
 #### Metrics
 Many metrics are exposed by Actuator.
+
+##### URL
 
 ```
     http://localhost:8080/actuator/metrics
@@ -205,6 +334,8 @@ This is a partial listing of the response from the /actuator/metrics endpoint.
 You can add any of the metrics to the end of the /actuator/metrics endpoint to get the specific
 metrics information.
 
+##### URL
+
 ```
     http://localhost:8080/actuator/metrics/executor.active
 ```
@@ -236,6 +367,8 @@ metrics information.
 #### Mappings
 This endpoint will show you all of the endpoints mapped for your application, both those
 defined by the application and those defined by the Spring Framework.
+
+##### URL
 
 ```
     http://localhost:8080/actuator/mappings
