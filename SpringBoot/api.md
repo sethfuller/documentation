@@ -1,37 +1,8 @@
-# APIs
-
-## Swagger
-
-### Maven Dependency
-In the **pom.xml** file add the following starter dependency.
-
-```xml
-    <dependencies>
-        ...
-		<dependency>
-			<groupId>org.springdoc</groupId>
-			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-			<version>2.0.0-M4</version>
-		</dependency>
-       ...
-    </dependencies>
-```
-
-
-### URLs
-```
-    http://localhost:8080/swagger-ui/index.html
-```
-
-```
-    http://localhost:8080/api-docs
-```
-
-## HATEOAS
+# HATEOAS
 HATEOAS stands for Hypermedia as the Engine of Application State.
 
-### Maven Dependency
-In the **pom.xml** file add the following starter dependency.
+### Dependency
+#### Maven
 
 ```xml
     <dependencies>
@@ -43,7 +14,14 @@ In the **pom.xml** file add the following starter dependency.
        ...
     </dependencies>
 ```
+#### Gradle
+```groovy
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-hateoas'
+}
+```
 
+### Example
 ```java
 
 import org.springframework.hateoas.EntityModel;
@@ -105,7 +83,8 @@ The "_links" object is in HAL format (see below).
 The best way to view HAL links is with HAL Explorer. To do that add the following to your
 pom.xml.
 
-#### Maven Dependency
+#### Dependency
+##### Maven
 In the **pom.xml** file add the following starter dependency.
 
 ```xml
@@ -117,6 +96,13 @@ In the **pom.xml** file add the following starter dependency.
 		</dependency>
        ...
     </dependencies>
+```
+
+##### Gradle
+```groovy
+dependencies {
+    implementation 'org.springframework.data:spring-data-rest-hal-explorer'
+}
 ```
 
 #### URLs
