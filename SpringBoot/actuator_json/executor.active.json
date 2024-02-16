@@ -1,0 +1,19 @@
+{
+  "name": "executor.active",
+  "description": "The approximate number of threads that are actively executing tasks",
+  "baseUnit": "threads",
+  "measurements": [
+    {
+      "statistic": "VALUE",
+      "value": 0.0
+    }
+  ],
+  "availableTags": [
+    {
+      "tag": "name",
+      "values": [
+        "applicationTaskExecutor"
+      ]
+    }
+  ]
+}

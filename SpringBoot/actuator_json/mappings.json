@@ -1,0 +1,999 @@
+{
+  "contexts": {
+    "application": {
+      "mappings": {
+        "dispatcherServlets": {
+          "dispatcherServlet": [
+            {
+              "handler": "org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler#handle(HttpServletRequest, Map)",
+              "predicate": "{GET [/actuator/info], produces [application/vnd.spring-boot.actuator.v3+json || application/vnd.spring-boot.actuator.v2+json || application/json]}",
+              "details": {
+                "handlerMethod": {
+                  "className": "org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping.OperationHandler",
+                  "name": "handle",
+                  "descriptor": "(Ljakarta/servlet/http/HttpServletRequest;Ljava/util/Map;)Ljava/lang/Object;"
+                },
+                "requestMappingConditions": {
+                  "consumes": [],
+                  "headers": [],
+                  "methods": [
+                    "GET"
+                  ],
+                  "params": [],
+                  "patterns": [
+                    "/actuator/info"
+                  ],
+                  "produces": [
+                    {
+                      "mediaType": "application/vnd.spring-boot.actuator.v3+json",
+                      "negated": false
+                    },
+                    {
+                      "mediaType": "application/vnd.spring-boot.actuator.v2+json",
+                      "negated": false
+                    },
+                    {
+                      "mediaType": "application/json",
+                      "negated": false
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "handler": "org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler#handle(HttpServletRequest, Map)",
+              "predicate": "{DELETE [/actuator/caches/{cache}], produces [application/vnd.spring-boot.actuator.v3+json || application/vnd.spring-boot.actuator.v2+json || application/json]}",
+              "details": {
+                "handlerMethod": {
+                  "className": "org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping.OperationHandler",
+                  "name": "handle",
+                  "descriptor": "(Ljakarta/servlet/http/HttpServletRequest;Ljava/util/Map;)Ljava/lang/Object;"
+                },
+                "requestMappingConditions": {
+                  "consumes": [],
+                  "headers": [],
+                  "methods": [
+                    "DELETE"
+                  ],
+                  "params": [],
+                  "patterns": [
+                    "/actuator/caches/{cache}"
+                  ],
+                  "produces": [
+                    {
+                      "mediaType": "application/vnd.spring-boot.actuator.v3+json",
+                      "negated": false
+                    },
+                    {
+                      "mediaType": "application/vnd.spring-boot.actuator.v2+json",
+                      "negated": false
+                    },
+                    {
+                      "mediaType": "application/json",
+                      "negated": false
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "handler": "org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler#handle(HttpServletRequest, Map)",
+              "predicate": "{GET [/actuator/beans], produces [application/vnd.spring-boot.actuator.v3+json || application/vnd.spring-boot.actuator.v2+json || application/json]}",
+              "details": {
+                "handlerMethod": {
+                  "className": "org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping.OperationHandler",
+                  "name": "handle",
+                  "descriptor": "(Ljakarta/servlet/http/HttpServletRequest;Ljava/util/Map;)Ljava/lang/Object;"
+                },
+                "requestMappingConditions": {
+                  "consumes": [],
+                  "headers": [],
+                  "methods": [
+                    "GET"
+                  ],
+                  "params": [],
+                  "patterns": [
+                    "/actuator/beans"
+                  ],
+                  "produces": [
+                    {
+                      "mediaType": "application/vnd.spring-boot.actuator.v3+json",
+                      "negated": false
+                    },
+                    {
+                      "mediaType": "application/vnd.spring-boot.actuator.v2+json",
+                      "negated": false
+                    },
+                    {
+                      "mediaType": "application/json",
+                      "negated": false
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "handler": "org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler#handle(HttpServletRequest, Map)",
+              "predicate": "{GET [/actuator/conditions], produces [application/vnd.spring-boot.actuator.v3+json || application/vnd.spring-boot.actuator.v2+json || application/json]}",
+              "details": {
+                "handlerMethod": {
+                  "className": "org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping.OperationHandler",
+                  "name": "handle",
+                  "descriptor": "(Ljakarta/servlet/http/HttpServletRequest;Ljava/util/Map;)Ljava/lang/Object;"
+                },
+                "requestMappingConditions": {
+                  "consumes": [],
+                  "headers": [],
+                  "methods": [
+                    "GET"
+                  ],
+                  "params": [],
+                  "patterns": [
+                    "/actuator/conditions"
+                  ],
+                  "produces": [
+                    {
+                      "mediaType": "application/vnd.spring-boot.actuator.v3+json",
+                      "negated": false
+                    },
+                    {
+                      "mediaType": "application/vnd.spring-boot.actuator.v2+json",
+                      "negated": false
+                    },
+                    {
+                      "mediaType": "application/json",
+                      "negated": false
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "handler": "org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler#handle(HttpServletRequest, Map)",
+              "predicate": "{GET [/actuator/heapdump], produces [application/octet-stream]}",
+              "details": {
+                "handlerMethod": {
+                  "className": "org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping.OperationHandler",
+                  "name": "handle",
+                  "descriptor": "(Ljakarta/servlet/http/HttpServletRequest;Ljava/util/Map;)Ljava/lang/Object;"
+                },
+                "requestMappingConditions": {
+                  "consumes": [],
+                  "headers": [],
+                  "methods": [
+                    "GET"
+                  ],
+                  "params": [],
+                  "patterns": [
+                    "/actuator/heapdump"
+                  ],
+                  "produces": [
+                    {
+                      "mediaType": "application/octet-stream",
+                      "negated": false
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "handler": "org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler#handle(HttpServletRequest, Map)",
+              "predicate": "{GET [/actuator/threaddump], produces [text/plain;charset=UTF-8]}",
+              "details": {
+                "handlerMethod": {
+                  "className": "org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping.OperationHandler",
+                  "name": "handle",
+                  "descriptor": "(Ljakarta/servlet/http/HttpServletRequest;Ljava/util/Map;)Ljava/lang/Object;"
+                },
+                "requestMappingConditions": {
+                  "consumes": [],
+                  "headers": [],
+                  "methods": [
+                    "GET"
+                  ],
+                  "params": [],
+                  "patterns": [
+                    "/actuator/threaddump"
+                  ],
+                  "produces": [
+                    {
+                      "mediaType": "text/plain;charset=UTF-8",
+                      "negated": false
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "handler": "org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler#handle(HttpServletRequest, Map)",
+              "predicate": "{GET [/actuator/health/**], produces [application/vnd.spring-boot.actuator.v3+json || application/vnd.spring-boot.actuator.v2+json || application/json]}",
+              "details": {
+                "handlerMethod": {
+                  "className": "org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping.OperationHandler",
+                  "name": "handle",
+                  "descriptor": "(Ljakarta/servlet/http/HttpServletRequest;Ljava/util/Map;)Ljava/lang/Object;"
+                },
+                "requestMappingConditions": {
+                  "consumes": [],
+                  "headers": [],
+                  "methods": [
+                    "GET"
+                  ],
+                  "params": [],
+                  "patterns": [
+                    "/actuator/health/**"
+                  ],
+                  "produces": [
+                    {
+                      "mediaType": "application/vnd.spring-boot.actuator.v3+json",
+                      "negated": false
+                    },
+                    {
+                      "mediaType": "application/vnd.spring-boot.actuator.v2+json",
+                      "negated": false
+                    },
+                    {
+                      "mediaType": "application/json",
+                      "negated": false
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "handler": "org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler#handle(HttpServletRequest, Map)",
+              "predicate": "{DELETE [/actuator/caches]}",
+              "details": {
+                "handlerMethod": {
+                  "className": "org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping.OperationHandler",
+                  "name": "handle",
+                  "descriptor": "(Ljakarta/servlet/http/HttpServletRequest;Ljava/util/Map;)Ljava/lang/Object;"
+                },
+                "requestMappingConditions": {
+                  "consumes": [],
+                  "headers": [],
+                  "methods": [
+                    "DELETE"
+                  ],
+                  "params": [],
+                  "patterns": [
+                    "/actuator/caches"
+                  ],
+                  "produces": []
+                }
+              }
+            },
+            {
+              "handler": "org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler#handle(HttpServletRequest, Map)",
+              "predicate": "{GET [/actuator/env], produces [application/vnd.spring-boot.actuator.v3+json || application/vnd.spring-boot.actuator.v2+json || application/json]}",
+              "details": {
+                "handlerMethod": {
+                  "className": "org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping.OperationHandler",
+                  "name": "handle",
+                  "descriptor": "(Ljakarta/servlet/http/HttpServletRequest;Ljava/util/Map;)Ljava/lang/Object;"
+                },
+                "requestMappingConditions": {
+                  "consumes": [],
+                  "headers": [],
+                  "methods": [
+                    "GET"
+                  ],
+                  "params": [],
+                  "patterns": [
+                    "/actuator/env"
+                  ],
+                  "produces": [
+                    {
+                      "mediaType": "application/vnd.spring-boot.actuator.v3+json",
+                      "negated": false
+                    },
+                    {
+                      "mediaType": "application/vnd.spring-boot.actuator.v2+json",
+                      "negated": false
+                    },
+                    {
+                      "mediaType": "application/json",
+                      "negated": false
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "handler": "org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler#handle(HttpServletRequest, Map)",
+              "predicate": "{GET [/actuator/threaddump], produces [application/vnd.spring-boot.actuator.v3+json || application/vnd.spring-boot.actuator.v2+json || application/json]}",
+              "details": {
+                "handlerMethod": {
+                  "className": "org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping.OperationHandler",
+                  "name": "handle",
+                  "descriptor": "(Ljakarta/servlet/http/HttpServletRequest;Ljava/util/Map;)Ljava/lang/Object;"
+                },
+                "requestMappingConditions": {
+                  "consumes": [],
+                  "headers": [],
+                  "methods": [
+                    "GET"
+                  ],
+                  "params": [],
+                  "patterns": [
+                    "/actuator/threaddump"
+                  ],
+                  "produces": [
+                    {
+                      "mediaType": "application/vnd.spring-boot.actuator.v3+json",
+                      "negated": false
+                    },
+                    {
+                      "mediaType": "application/vnd.spring-boot.actuator.v2+json",
+                      "negated": false
+                    },
+                    {
+                      "mediaType": "application/json",
+                      "negated": false
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "handler": "org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler#handle(HttpServletRequest, Map)",
+              "predicate": "{GET [/actuator/env/{toMatch}], produces [application/vnd.spring-boot.actuator.v3+json || application/vnd.spring-boot.actuator.v2+json || application/json]}",
+              "details": {
+                "handlerMethod": {
+                  "className": "org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping.OperationHandler",
+                  "name": "handle",
+                  "descriptor": "(Ljakarta/servlet/http/HttpServletRequest;Ljava/util/Map;)Ljava/lang/Object;"
+                },
+                "requestMappingConditions": {
+                  "consumes": [],
+                  "headers": [],
+                  "methods": [
+                    "GET"
+                  ],
+                  "params": [],
+                  "patterns": [
+                    "/actuator/env/{toMatch}"
+                  ],
+                  "produces": [
+                    {
+                      "mediaType": "application/vnd.spring-boot.actuator.v3+json",
+                      "negated": false
+                    },
+                    {
+                      "mediaType": "application/vnd.spring-boot.actuator.v2+json",
+                      "negated": false
+                    },
+                    {
+                      "mediaType": "application/json",
+                      "negated": false
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "handler": "org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler#handle(HttpServletRequest, Map)",
+              "predicate": "{GET [/actuator/health], produces [application/vnd.spring-boot.actuator.v3+json || application/vnd.spring-boot.actuator.v2+json || application/json]}",
+              "details": {
+                "handlerMethod": {
+                  "className": "org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping.OperationHandler",
+                  "name": "handle",
+                  "descriptor": "(Ljakarta/servlet/http/HttpServletRequest;Ljava/util/Map;)Ljava/lang/Object;"
+                },
+                "requestMappingConditions": {
+                  "consumes": [],
+                  "headers": [],
+                  "methods": [
+                    "GET"
+                  ],
+                  "params": [],
+                  "patterns": [
+                    "/actuator/health"
+                  ],
+                  "produces": [
+                    {
+                      "mediaType": "application/vnd.spring-boot.actuator.v3+json",
+                      "negated": false
+                    },
+                    {
+                      "mediaType": "application/vnd.spring-boot.actuator.v2+json",
+                      "negated": false
+                    },
+                    {
+                      "mediaType": "application/json",
+                      "negated": false
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "handler": "org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler#handle(HttpServletRequest, Map)",
+              "predicate": "{GET [/actuator/caches/{cache}], produces [application/vnd.spring-boot.actuator.v3+json || application/vnd.spring-boot.actuator.v2+json || application/json]}",
+              "details": {
+                "handlerMethod": {
+                  "className": "org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping.OperationHandler",
+                  "name": "handle",
+                  "descriptor": "(Ljakarta/servlet/http/HttpServletRequest;Ljava/util/Map;)Ljava/lang/Object;"
+                },
+                "requestMappingConditions": {
+                  "consumes": [],
+                  "headers": [],
+                  "methods": [
+                    "GET"
+                  ],
+                  "params": [],
+                  "patterns": [
+                    "/actuator/caches/{cache}"
+                  ],
+                  "produces": [
+                    {
+                      "mediaType": "application/vnd.spring-boot.actuator.v3+json",
+                      "negated": false
+                    },
+                    {
+                      "mediaType": "application/vnd.spring-boot.actuator.v2+json",
+                      "negated": false
+                    },
+                    {
+                      "mediaType": "application/json",
+                      "negated": false
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "handler": "org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler#handle(HttpServletRequest, Map)",
+              "predicate": "{POST [/actuator/loggers/{name}], consumes [application/vnd.spring-boot.actuator.v3+json || application/vnd.spring-boot.actuator.v2+json || application/json]}",
+              "details": {
+                "handlerMethod": {
+                  "className": "org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping.OperationHandler",
+                  "name": "handle",
+                  "descriptor": "(Ljakarta/servlet/http/HttpServletRequest;Ljava/util/Map;)Ljava/lang/Object;"
+                },
+                "requestMappingConditions": {
+                  "consumes": [
+                    {
+                      "mediaType": "application/vnd.spring-boot.actuator.v3+json",
+                      "negated": false
+                    },
+                    {
+                      "mediaType": "application/vnd.spring-boot.actuator.v2+json",
+                      "negated": false
+                    },
+                    {
+                      "mediaType": "application/json",
+                      "negated": false
+                    }
+                  ],
+                  "headers": [],
+                  "methods": [
+                    "POST"
+                  ],
+                  "params": [],
+                  "patterns": [
+                    "/actuator/loggers/{name}"
+                  ],
+                  "produces": []
+                }
+              }
+            },
+            {
+              "handler": "org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler#handle(HttpServletRequest, Map)",
+              "predicate": "{GET [/actuator/metrics], produces [application/vnd.spring-boot.actuator.v3+json || application/vnd.spring-boot.actuator.v2+json || application/json]}",
+              "details": {
+                "handlerMethod": {
+                  "className": "org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping.OperationHandler",
+                  "name": "handle",
+                  "descriptor": "(Ljakarta/servlet/http/HttpServletRequest;Ljava/util/Map;)Ljava/lang/Object;"
+                },
+                "requestMappingConditions": {
+                  "consumes": [],
+                  "headers": [],
+                  "methods": [
+                    "GET"
+                  ],
+                  "params": [],
+                  "patterns": [
+                    "/actuator/metrics"
+                  ],
+                  "produces": [
+                    {
+                      "mediaType": "application/vnd.spring-boot.actuator.v3+json",
+                      "negated": false
+                    },
+                    {
+                      "mediaType": "application/vnd.spring-boot.actuator.v2+json",
+                      "negated": false
+                    },
+                    {
+                      "mediaType": "application/json",
+                      "negated": false
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "handler": "org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler#handle(HttpServletRequest, Map)",
+              "predicate": "{GET [/actuator/configprops/{prefix}], produces [application/vnd.spring-boot.actuator.v3+json || application/vnd.spring-boot.actuator.v2+json || application/json]}",
+              "details": {
+                "handlerMethod": {
+                  "className": "org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping.OperationHandler",
+                  "name": "handle",
+                  "descriptor": "(Ljakarta/servlet/http/HttpServletRequest;Ljava/util/Map;)Ljava/lang/Object;"
+                },
+                "requestMappingConditions": {
+                  "consumes": [],
+                  "headers": [],
+                  "methods": [
+                    "GET"
+                  ],
+                  "params": [],
+                  "patterns": [
+                    "/actuator/configprops/{prefix}"
+                  ],
+                  "produces": [
+                    {
+                      "mediaType": "application/vnd.spring-boot.actuator.v3+json",
+                      "negated": false
+                    },
+                    {
+                      "mediaType": "application/vnd.spring-boot.actuator.v2+json",
+                      "negated": false
+                    },
+                    {
+                      "mediaType": "application/json",
+                      "negated": false
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "handler": "org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler#handle(HttpServletRequest, Map)",
+              "predicate": "{GET [/actuator/configprops], produces [application/vnd.spring-boot.actuator.v3+json || application/vnd.spring-boot.actuator.v2+json || application/json]}",
+              "details": {
+                "handlerMethod": {
+                  "className": "org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping.OperationHandler",
+                  "name": "handle",
+                  "descriptor": "(Ljakarta/servlet/http/HttpServletRequest;Ljava/util/Map;)Ljava/lang/Object;"
+                },
+                "requestMappingConditions": {
+                  "consumes": [],
+                  "headers": [],
+                  "methods": [
+                    "GET"
+                  ],
+                  "params": [],
+                  "patterns": [
+                    "/actuator/configprops"
+                  ],
+                  "produces": [
+                    {
+                      "mediaType": "application/vnd.spring-boot.actuator.v3+json",
+                      "negated": false
+                    },
+                    {
+                      "mediaType": "application/vnd.spring-boot.actuator.v2+json",
+                      "negated": false
+                    },
+                    {
+                      "mediaType": "application/json",
+                      "negated": false
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "handler": "org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler#handle(HttpServletRequest, Map)",
+              "predicate": "{GET [/actuator/mappings], produces [application/vnd.spring-boot.actuator.v3+json || application/vnd.spring-boot.actuator.v2+json || application/json]}",
+              "details": {
+                "handlerMethod": {
+                  "className": "org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping.OperationHandler",
+                  "name": "handle",
+                  "descriptor": "(Ljakarta/servlet/http/HttpServletRequest;Ljava/util/Map;)Ljava/lang/Object;"
+                },
+                "requestMappingConditions": {
+                  "consumes": [],
+                  "headers": [],
+                  "methods": [
+                    "GET"
+                  ],
+                  "params": [],
+                  "patterns": [
+                    "/actuator/mappings"
+                  ],
+                  "produces": [
+                    {
+                      "mediaType": "application/vnd.spring-boot.actuator.v3+json",
+                      "negated": false
+                    },
+                    {
+                      "mediaType": "application/vnd.spring-boot.actuator.v2+json",
+                      "negated": false
+                    },
+                    {
+                      "mediaType": "application/json",
+                      "negated": false
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "handler": "org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler#handle(HttpServletRequest, Map)",
+              "predicate": "{GET [/actuator/metrics/{requiredMetricName}], produces [application/vnd.spring-boot.actuator.v3+json || application/vnd.spring-boot.actuator.v2+json || application/json]}",
+              "details": {
+                "handlerMethod": {
+                  "className": "org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping.OperationHandler",
+                  "name": "handle",
+                  "descriptor": "(Ljakarta/servlet/http/HttpServletRequest;Ljava/util/Map;)Ljava/lang/Object;"
+                },
+                "requestMappingConditions": {
+                  "consumes": [],
+                  "headers": [],
+                  "methods": [
+                    "GET"
+                  ],
+                  "params": [],
+                  "patterns": [
+                    "/actuator/metrics/{requiredMetricName}"
+                  ],
+                  "produces": [
+                    {
+                      "mediaType": "application/vnd.spring-boot.actuator.v3+json",
+                      "negated": false
+                    },
+                    {
+                      "mediaType": "application/vnd.spring-boot.actuator.v2+json",
+                      "negated": false
+                    },
+                    {
+                      "mediaType": "application/json",
+                      "negated": false
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "handler": "org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler#handle(HttpServletRequest, Map)",
+              "predicate": "{GET [/actuator/loggers/{name}], produces [application/vnd.spring-boot.actuator.v3+json || application/vnd.spring-boot.actuator.v2+json || application/json]}",
+              "details": {
+                "handlerMethod": {
+                  "className": "org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping.OperationHandler",
+                  "name": "handle",
+                  "descriptor": "(Ljakarta/servlet/http/HttpServletRequest;Ljava/util/Map;)Ljava/lang/Object;"
+                },
+                "requestMappingConditions": {
+                  "consumes": [],
+                  "headers": [],
+                  "methods": [
+                    "GET"
+                  ],
+                  "params": [],
+                  "patterns": [
+                    "/actuator/loggers/{name}"
+                  ],
+                  "produces": [
+                    {
+                      "mediaType": "application/vnd.spring-boot.actuator.v3+json",
+                      "negated": false
+                    },
+                    {
+                      "mediaType": "application/vnd.spring-boot.actuator.v2+json",
+                      "negated": false
+                    },
+                    {
+                      "mediaType": "application/json",
+                      "negated": false
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "handler": "org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler#handle(HttpServletRequest, Map)",
+              "predicate": "{GET [/actuator/loggers], produces [application/vnd.spring-boot.actuator.v3+json || application/vnd.spring-boot.actuator.v2+json || application/json]}",
+              "details": {
+                "handlerMethod": {
+                  "className": "org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping.OperationHandler",
+                  "name": "handle",
+                  "descriptor": "(Ljakarta/servlet/http/HttpServletRequest;Ljava/util/Map;)Ljava/lang/Object;"
+                },
+                "requestMappingConditions": {
+                  "consumes": [],
+                  "headers": [],
+                  "methods": [
+                    "GET"
+                  ],
+                  "params": [],
+                  "patterns": [
+                    "/actuator/loggers"
+                  ],
+                  "produces": [
+                    {
+                      "mediaType": "application/vnd.spring-boot.actuator.v3+json",
+                      "negated": false
+                    },
+                    {
+                      "mediaType": "application/vnd.spring-boot.actuator.v2+json",
+                      "negated": false
+                    },
+                    {
+                      "mediaType": "application/json",
+                      "negated": false
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "handler": "org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler#handle(HttpServletRequest, Map)",
+              "predicate": "{GET [/actuator/scheduledtasks], produces [application/vnd.spring-boot.actuator.v3+json || application/vnd.spring-boot.actuator.v2+json || application/json]}",
+              "details": {
+                "handlerMethod": {
+                  "className": "org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping.OperationHandler",
+                  "name": "handle",
+                  "descriptor": "(Ljakarta/servlet/http/HttpServletRequest;Ljava/util/Map;)Ljava/lang/Object;"
+                },
+                "requestMappingConditions": {
+                  "consumes": [],
+                  "headers": [],
+                  "methods": [
+                    "GET"
+                  ],
+                  "params": [],
+                  "patterns": [
+                    "/actuator/scheduledtasks"
+                  ],
+                  "produces": [
+                    {
+                      "mediaType": "application/vnd.spring-boot.actuator.v3+json",
+                      "negated": false
+                    },
+                    {
+                      "mediaType": "application/vnd.spring-boot.actuator.v2+json",
+                      "negated": false
+                    },
+                    {
+                      "mediaType": "application/json",
+                      "negated": false
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "handler": "org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping$WebMvcLinksHandler#links(HttpServletRequest, HttpServletResponse)",
+              "predicate": "{GET [/actuator], produces [application/vnd.spring-boot.actuator.v3+json || application/vnd.spring-boot.actuator.v2+json || application/json]}",
+              "details": {
+                "handlerMethod": {
+                  "className": "org.springframework.boot.actuate.endpoint.web.servlet.WebMvcEndpointHandlerMapping.WebMvcLinksHandler",
+                  "name": "links",
+                  "descriptor": "(Ljakarta/servlet/http/HttpServletRequest;Ljakarta/servlet/http/HttpServletResponse;)Ljava/util/Map;"
+                },
+                "requestMappingConditions": {
+                  "consumes": [],
+                  "headers": [],
+                  "methods": [
+                    "GET"
+                  ],
+                  "params": [],
+                  "patterns": [
+                    "/actuator"
+                  ],
+                  "produces": [
+                    {
+                      "mediaType": "application/vnd.spring-boot.actuator.v3+json",
+                      "negated": false
+                    },
+                    {
+                      "mediaType": "application/vnd.spring-boot.actuator.v2+json",
+                      "negated": false
+                    },
+                    {
+                      "mediaType": "application/json",
+                      "negated": false
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "handler": "org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping$OperationHandler#handle(HttpServletRequest, Map)",
+              "predicate": "{GET [/actuator/caches], produces [application/vnd.spring-boot.actuator.v3+json || application/vnd.spring-boot.actuator.v2+json || application/json]}",
+              "details": {
+                "handlerMethod": {
+                  "className": "org.springframework.boot.actuate.endpoint.web.servlet.AbstractWebMvcEndpointHandlerMapping.OperationHandler",
+                  "name": "handle",
+                  "descriptor": "(Ljakarta/servlet/http/HttpServletRequest;Ljava/util/Map;)Ljava/lang/Object;"
+                },
+                "requestMappingConditions": {
+                  "consumes": [],
+                  "headers": [],
+                  "methods": [
+                    "GET"
+                  ],
+                  "params": [],
+                  "patterns": [
+                    "/actuator/caches"
+                  ],
+                  "produces": [
+                    {
+                      "mediaType": "application/vnd.spring-boot.actuator.v3+json",
+                      "negated": false
+                    },
+                    {
+                      "mediaType": "application/vnd.spring-boot.actuator.v2+json",
+                      "negated": false
+                    },
+                    {
+                      "mediaType": "application/json",
+                      "negated": false
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "handler": "net.javaguides.springbootrestapi.controller.StudentController#getStudent(int)",
+              "predicate": "{GET [/students/{id}]}",
+              "details": {
+                "handlerMethod": {
+                  "className": "net.javaguides.springbootrestapi.controller.StudentController",
+                  "name": "getStudent",
+                  "descriptor": "(I)Lorg/springframework/http/ResponseEntity;"
+                },
+                "requestMappingConditions": {
+                  "consumes": [],
+                  "headers": [],
+                  "methods": [
+                    "GET"
+                  ],
+                  "params": [],
+                  "patterns": [
+                    "/students/{id}"
+                  ],
+                  "produces": []
+                }
+              }
+            },
+            {
+              "handler": "org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)",
+              "predicate": "{ [/error], produces [text/html]}",
+              "details": {
+                "handlerMethod": {
+                  "className": "org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController",
+                  "name": "errorHtml",
+                  "descriptor": "(Ljakarta/servlet/http/HttpServletRequest;Ljakarta/servlet/http/HttpServletResponse;)Lorg/springframework/web/servlet/ModelAndView;"
+                },
+                "requestMappingConditions": {
+                  "consumes": [],
+                  "headers": [],
+                  "methods": [],
+                  "params": [],
+                  "patterns": [
+                    "/error"
+                  ],
+                  "produces": [
+                    {
+                      "mediaType": "text/html",
+                      "negated": false
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "handler": "org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)",
+              "predicate": "{ [/error]}",
+              "details": {
+                "handlerMethod": {
+                  "className": "org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController",
+                  "name": "error",
+                  "descriptor": "(Ljakarta/servlet/http/HttpServletRequest;)Lorg/springframework/http/ResponseEntity;"
+                },
+                "requestMappingConditions": {
+                  "consumes": [],
+                  "headers": [],
+                  "methods": [],
+                  "params": [],
+                  "patterns": [
+                    "/error"
+                  ],
+                  "produces": []
+                }
+              }
+            },
+            {
+              "handler": "net.javaguides.springbootrestapi.controller.StudentController#getStudents()",
+              "predicate": "{GET [/students]}",
+              "details": {
+                "handlerMethod": {
+                  "className": "net.javaguides.springbootrestapi.controller.StudentController",
+                  "name": "getStudents",
+                  "descriptor": "()Ljava/util/List;"
+                },
+                "requestMappingConditions": {
+                  "consumes": [],
+                  "headers": [],
+                  "methods": [
+                    "GET"
+                  ],
+                  "params": [],
+                  "patterns": [
+                    "/students"
+                  ],
+                  "produces": []
+                }
+              }
+            },
+            {
+              "handler": "ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]",
+              "predicate": "/webjars/**"
+            },
+            {
+              "handler": "ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]",
+              "predicate": "/**"
+            }
+          ]
+        },
+        "servletFilters": [
+          {
+            "servletNameMappings": [],
+            "urlPatternMappings": [
+              "/*"
+            ],
+            "name": "requestContextFilter",
+            "className": "org.springframework.boot.web.servlet.filter.OrderedRequestContextFilter"
+          },
+          {
+            "servletNameMappings": [],
+            "urlPatternMappings": [
+              "/*"
+            ],
+            "name": "webMvcObservationFilter",
+            "className": "org.springframework.web.filter.ServerHttpObservationFilter"
+          },
+          {
+            "servletNameMappings": [],
+            "urlPatternMappings": [
+              "/*"
+            ],
+            "name": "Tomcat WebSocket (JSR356) Filter",
+            "className": "org.apache.tomcat.websocket.server.WsFilter"
+          },
+          {
+            "servletNameMappings": [],
+            "urlPatternMappings": [
+              "/*"
+            ],
+            "name": "characterEncodingFilter",
+            "className": "org.springframework.boot.web.servlet.filter.OrderedCharacterEncodingFilter"
+          },
+          {
+            "servletNameMappings": [],
+            "urlPatternMappings": [
+              "/*"
+            ],
+            "name": "formContentFilter",
+            "className": "org.springframework.boot.web.servlet.filter.OrderedFormContentFilter"
+          }
+        ],
+        "servlets": [
+          {
+            "mappings": [
+              "/"
+            ],
+            "name": "dispatcherServlet",
+            "className": "org.springframework.web.servlet.DispatcherServlet"
+          }
+        ]
+      }
+    }
+  }
+}
