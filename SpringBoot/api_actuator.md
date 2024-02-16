@@ -39,10 +39,12 @@ In application.properties enter:
 
 # Activate all actuator endpoints
 management.endpoints.web.exposure.include=*
+
 # Show the values set for configuration values
 # The default is NEVER
 # The other valid value is WHEN_AUTHORIZED
 management.endpoint.configprops.show-values=ALWAYS
+
 # Show all variables set for the application by configuration, or in the system
 # Valid values: ALWAYS, NEVER (default), WHEN_AUTHORIZED
 management.endpoint.env.show-values=ALWAYS
