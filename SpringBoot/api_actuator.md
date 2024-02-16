@@ -1,7 +1,8 @@
 ## Monitoring with Actuator
 The Actuator module provides all of Spring Boot's production-ready features.
 
-#### Maven Dependency
+### Dependency
+#### Maven
 In the **pom.xml** file add the following starter dependency to activate Actuator.
 
 ```xml
@@ -13,6 +14,13 @@ In the **pom.xml** file add the following starter dependency to activate Actuato
 		</dependency>
        ...
     </dependencies>
+```
+#### Gradle
+
+```groovy
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+}
 ```
 
 #### URL
