@@ -1,5 +1,6 @@
 # Documentation
 
+## Swagger
 ```xml
 		<dependency>
 			<groupId>org.springdoc</groupId>
@@ -8,7 +9,7 @@
 		</dependency>
 ```
 
-## Swagger
+## HATEOAS
 ```xml
 		<dependency>
 	      <groupId>org.springdoc</groupId>
