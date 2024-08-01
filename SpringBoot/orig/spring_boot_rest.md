@@ -34,7 +34,9 @@ public class UserServiceApplication {
 |@PostMapping("/users"|On POST request create an entity with the Request Body|
 |@DeleteMapping("/users/{id}")|When a DELETE request is recieved with an id field process with this method|
 |@PathVariable("id") String userId|Extract the variable with name "id" and place it in userId|
+|@RequestParam|Query String param|
 |@ResponseBody|This request returns data in the body|
+|@RequestBody|This request contains data|
 
 ```java
 package com.sethfuller.controller;
