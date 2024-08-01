@@ -1,7 +1,10 @@
 # Swagger
 [Swagger Documentation](https://swagger.io/docs/specification/about/)
-[Swagger Annotations](https://github.com/swagger-api/swagger-core/wiki/Annotations-1.5.X)
+[Swagger 1.5 Annotations](https://github.com/swagger-api/swagger-core/wiki/Annotations-1.5.X)
+[Swagger 2.X Annotations](https://github.com/swagger-api/swagger-core/wiki/Swagger-2.X---Annotations)
 [Swagger Example Baeldung](https://www.baeldung.com/swagger-set-example-description)
+
+[OpenAPI Specification](https://github.com/OAI/OpenAPI-Specification)
 
 ## Dependency
 ### Spring Boot 3
