@@ -1,5 +1,7 @@
 # Spring Boot REST
 [Spring Boot Main Page](spring_boot.md)
+[Rest Annotations Tutorial](https://spring.io/guides/tutorials/rest)
+[Spring REST Annotations Java67](https://www.java67.com/2019/04/top-10-spring-mvc-and-rest-annotations-examples-java.html)
 
 ## Application
 |Annotation|Description|
