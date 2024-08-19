@@ -1,5 +1,3 @@
-## Grid Dynamics
-
 ## Kubernetes
 [Kubernetes Overview](https://kubernetes.io/docs/concepts/overview/#why-you-need-kubernetes-and-what-can-it-do)
 
