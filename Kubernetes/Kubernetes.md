@@ -1,7 +1,14 @@
 ## Kubernetes
 [Kubernetes Overview](https://kubernetes.io/docs/concepts/overview/#why-you-need-kubernetes-and-what-can-it-do)
 
+_________________________
+### Monitoring
+[Monitoring](https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-usage-monitoring/)
+
+
+_________________________
 ### Control Plane
+[Control Plane Components](https://kubernetes.io/docs/concepts/overview/components/#control-plane-components)
 
 _________________________
 ### Nodes
