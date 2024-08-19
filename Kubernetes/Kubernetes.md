@@ -178,7 +178,7 @@ and advanced traffic routing.
 ##### Design principles
 The following principles shaped the design and architecture of Gateway API:
 
-**Role-oriented:** Gateway API kinds are modeled after organizational roles that are responsible for managing Kubernetes service networking:
+    - **Role-oriented:** Gateway API kinds are modeled after organizational roles that are responsible for managing Kubernetes service networking:
 
 **Infrastructure Provider:** Manages infrastructure that allows multiple isolated clusters to serve multiple tenants, e.g. a cloud provider.
 
