@@ -5,7 +5,6 @@ _________________________
 ### Monitoring
 [Monitoring](https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-usage-monitoring/)
 
-
 _________________________
 ### Control Plane
 [Control Plane Components](https://kubernetes.io/docs/concepts/overview/components/#control-plane-components)
