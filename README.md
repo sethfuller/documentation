@@ -4,7 +4,7 @@
 ### Docker
 
 ### Kubernetes
-[Kubernetes Overview](./Kubernetes/KubernetesOverview.md?&target=_blank)
+[Kubernetes Overview](./Kubernetes/KubernetesOverview.md){:&target="_blank"}
 
 ## Database
 
