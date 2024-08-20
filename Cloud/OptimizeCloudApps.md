@@ -11,7 +11,7 @@ Cloud optimization is crucial for several reasons. First, it can lead to signifi
 Now that we’ve covered the basics, let’s dive into some practical steps you can take to optimize your cloud environment.
 Practical Ways to Optimize Your Cloud
 
-1. Right-Size Your Services
+### 1. Right-Size Your Services
 
 One of the first steps in optimizing your cloud is to right-size your services. This means ensuring that you’re using the right services for the right tasks and that you’re not overprovisioning your resources, which can lead to wasted resources and unnecessary costs.
 
